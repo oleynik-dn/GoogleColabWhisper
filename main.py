@@ -15,6 +15,8 @@ def transcribe_audio():
     google_drive_url = f'https://drive.google.com/uc?id={google_drive_file_id}'
     audio_file_name = 'audioFileName.mp3'  # Change this to match your desired file format
 
+    # Download the audio file from Google Drive
+    gdown.download(google_drive_url, audio_file_name, quiet=False)
 
     # Rest of your code for transcription
     API_KEY = 'YOUR API_KEY'
